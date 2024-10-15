@@ -10,23 +10,19 @@ This is a Spring Boot application for managing beneficiaries' accounts. The proj
 
 Before running the application, ensure you have the following installed:
 
-- Java (JDK 11 or higher)
+- Java (JDK 17 or higher)
 - Maven
 - Docker
 - Git
 
-## Clone the repository
+## Clone the repository and start the app
 
-To get started, clone the repository from GitHub:
+To get started, clone the repository from GitHub and then start the app via docker
 
 ```bash
 git clone https://github.com/h00jie/bank-accounts-management-app.git
 cd bank-accounts-management-app
-mvn clean install
-mvn package
-docker build -t beneficiaries-accounts-management-app .
-docker run -p 8080:8080 beneficiaries-accounts-management-app
-
+docker-compose up --build
 ```
 
 ## Test some endopoints

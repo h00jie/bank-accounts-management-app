@@ -1,0 +1,11 @@
+services:
+  beneficiaries-accounts-management-app:
+    container_name: beneficiaries-accounts-management-app
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - JAVA_OPTS=-Xmx512m
+    restart: always

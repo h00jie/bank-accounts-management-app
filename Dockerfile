@@ -1,9 +1,17 @@
-FROM eclipse-temurin:17-jdk-alpine
+FROM maven:3.8.5-openjdk-17-slim AS build
 
 WORKDIR /app
 
-COPY target/beneficiaries-accounts-management-app-0.0.1-SNAPSHOT.jar app.jar
+COPY pom.xml .
 
-EXPOSE 8080
+COPY src ./src
+
+RUN mvn clean package -DskipTests
+
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+COPY --from=build /app/target/beneficiaries-accounts-management-app-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
