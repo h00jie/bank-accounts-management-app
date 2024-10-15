@@ -15,15 +15,27 @@ Before running the application, ensure you have the following installed:
 - Docker
 - Git
 
-## Clone the repository and start the app
+## Clone the repository
 
 To get started, clone the repository from GitHub and then start the app via docker
 
 ```bash
 git clone https://github.com/h00jie/bank-accounts-management-app.git
 cd bank-accounts-management-app
+```
+
+## Start the app 
+We can  do it in 2 ways via maven or docker 
+
+### Maven 
+```bash
+mvn spring-boot:run
+```
+### docker:
+```bash
 docker-compose up --build
 ```
+
 
 ## Test some endopoints
 
