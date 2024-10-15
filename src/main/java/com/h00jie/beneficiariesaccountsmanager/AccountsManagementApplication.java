@@ -1,12 +1,12 @@
-package com.h00jie.bankaccountsmanagementapp;
+package com.h00jie.beneficiariesaccountsmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AccountManagementApplication {
+public class AccountsManagementApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AccountManagementApplication.class, args);
+        SpringApplication.run(AccountsManagementApplication.class, args);
     }
 }
