@@ -35,7 +35,8 @@ mvn spring-boot:run
 ```bash
 docker-compose up --build
 ```
-
+## Visit OpenAPI URL
+[Swagger URL](http://localhost:8080/swagger-ui/index.html)
 
 ## Test some endopoints
 
